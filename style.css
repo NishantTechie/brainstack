@@ -3530,15 +3530,18 @@ video {
 }
 
 .review-vid{
+    background-color: #00ACED;
+    outline: none;
     object-fit: contain;
     width: 'auto'; 
     height: 270px;
     border-radius: 5px;
     overflow: hidden;
+    border: 1px solid #DCDDDC;
 }
 
 .review-vid-resize1{
-    height: 270px;
+    height: 275px;
 }
 
 .review-vid-resize{
