@@ -3480,7 +3480,7 @@ video {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 400px ) {
+@media only screen and (max-width: 415px ) {
    .head-title{
         background: rgba(5, 5, 12, 0.3) !important;
         color: #ffffff !important;
