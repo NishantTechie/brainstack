@@ -229,34 +229,36 @@ windows.on('scroll', function() {
 		}
 	});
 	function submitForm(){
+		
 		var name = $("#name").val();
 		var email = $("#email").val();
-		var msg_subject = $("#msg_subject").val();
 		var message = $("#message").val();
+		var subject = $("#subject").val();
 		
-		// let formData = new FormData()
-		// formData.append('name', name)
-		// formData.append('email', email)
-		// formData.append('name', name)
-		// formData.append('name', name)
-
-
-		// fetch('/', {
-		// 	method: 'POST',
-		// 	headers: { "Content-Type": "application/x-www-form-urlencoded" },
-		// 	body: new URLSearchParams(formData).toString()
-		// }).then(() => console.log('Form successfully submitted')).catch((error) =>
-    // alert(error))
+		let formData = new FormData()
+		formData.append('name', name)
+		formData.append('email', email)
+		formData.append('message', message)
+		formData.append('subject', subject)
+	
+		fetch('/', {
+			method: 'POST',
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: new URLSearchParams(formData).toString()
+		})
+		.then(() => {
+			$("#contactForm")[0].reset();
+			swal({
+				title: "Message Recieved.",
+				text: "We will revert back shortly!",
+				icon: "success",
+			});
+		})
+		.catch((error) => alert(error))
 
 
 		// reset form
-		$("#contactForm")[0].reset();
-
-		swal({
-			title: "Message Recieved.",
-			text: "We will revert back shortly!",
-			icon: "success",
-		});
+		
 
 		// $("#name")
 		// $.ajax({
