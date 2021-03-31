@@ -234,6 +234,21 @@ windows.on('scroll', function() {
 		var msg_subject = $("#msg_subject").val();
 		var message = $("#message").val();
 		
+		// let formData = new FormData()
+		// formData.append('name', name)
+		// formData.append('email', email)
+		// formData.append('name', name)
+		// formData.append('name', name)
+
+
+		// fetch('/', {
+		// 	method: 'POST',
+		// 	headers: { "Content-Type": "application/x-www-form-urlencoded" },
+		// 	body: new URLSearchParams(formData).toString()
+		// }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    // alert(error))
+
+
 		// reset form
 		$("#contactForm")[0].reset();
 
