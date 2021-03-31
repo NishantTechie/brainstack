@@ -457,13 +457,13 @@ windows.on('scroll', function() {
     navText: ['',''],
 	});
 	
-
-	$('.slick-slide-ani').slick({
-		autoplay: true,
-		autoplaySpeed: 1000,
-		// centerMode: true,
-		slidesToShow: 1
-	});
+	if($('.slick-slide-ani'))
+		$('.slick-slide-ani').slick({
+			autoplay: true,
+			autoplaySpeed: 1000,
+			// centerMode: true,
+			slidesToShow: 1
+		});
 
 })(jQuery); 
 
