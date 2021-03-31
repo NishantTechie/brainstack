@@ -7,7 +7,7 @@ preloader
 	
 	$(window).on('load',function(){
 		var pre_loader = $('#preloader')
-	pre_loader.fadeOut('slow',function(){$(this).remove();});
+		pre_loader.fadeOut('slow',function(){$(this).remove();});
 	});	
     
 /*---------------------
@@ -286,6 +286,14 @@ windows.on('scroll', function() {
 	// setTimeout(() => {
 	// 	$('#exampleModal').modal()
 	// }, 2000)
+
+
+		// document.querySelector("#contactForm").addEventListener("submit", handleSubmit);
+
+		// const handleSubmit = (e) => {
+		// 	e.preventDefault()
+			
+		// }
 
 
 	const selector = '.left-menu li';
