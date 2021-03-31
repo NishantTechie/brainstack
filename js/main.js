@@ -219,15 +219,16 @@ windows.on('scroll', function() {
 /*----------------------------
     Contact form
 ------------------------------ */
-	$("#contactForm").on("submit", function (event) {
-		if (event.isDefaultPrevented()) {
-			formError();
-			submitMSG(false, "Did you fill in the form properly?");
-		} else {
-			event.preventDefault();
-			submitForm();
-		}
-	});
+	// $("#contactForm").on("submit", function (event) {
+	// 	if (event.isDefaultPrevented()) {
+	// 		formError();
+	// 		submitMSG(false, "Did you fill in the form properly?");
+	// 	} else {
+	// 		event.preventDefault();
+	// 		submitForm();
+	// 	}
+	// });
+
 	function submitForm(){
 		
 		var name = $("#name").val();
