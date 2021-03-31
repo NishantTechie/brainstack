@@ -279,13 +279,13 @@
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="contact-form">
                             <div class="row">
-                                <form name="contact" id="contactForm" method="POST" onsubmit="submitForm();" class="contact-form" data-netlify="true">
+                                <form name="contact" id="contactForm" method="POST" class="contact-form" data-netlify="true">
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
+                                        <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name" name="name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
+                                        <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email" name="email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -295,7 +295,7 @@
                                             data-error="Please enter your message subject" 
                                             required 
                                             id="subject"
-                                            
+                                            name="subject"
                                             >
                                             <option value="" disabled selected>Subject</option>
                                             <option value="I have got a software project to be undertaken">
@@ -322,7 +322,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
-                                        <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
+                                        <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message" name="message"></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="col-md-12 col-sm-12 col-xs-12 text-center">
