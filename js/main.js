@@ -233,21 +233,30 @@ windows.on('scroll', function() {
 		var email = $("#email").val();
 		var msg_subject = $("#msg_subject").val();
 		var message = $("#message").val();
+		
+		// reset form
+		$("#contactForm")[0].reset();
 
-
-		$.ajax({
-			type: "POST",
-			url: "assets/contact.php",
-			data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
-			success : function(text){
-				if (text === "success"){
-					formSuccess();
-				} else {
-					formError();
-					submitMSG(false,text);
-				}
-			}
+		swal({
+			title: "Message Recieved.",
+			text: "We will revert back shortly!",
+			icon: "success",
 		});
+
+		// $("#name")
+		// $.ajax({
+		// 	type: "POST",
+		// 	url: "assets/contact.php",
+		// 	data: "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&message=" + message,
+		// 	success : function(text){
+		// 		if (text === "success"){
+		// 			formSuccess();
+		// 		} else {
+		// 			formError();
+		// 			submitMSG(false,text);
+		// 		}
+		// 	}
+		// });
 	}
 
 	function formSuccess(){
@@ -283,6 +292,7 @@ windows.on('scroll', function() {
 	const current = location.hash;
 	
 	function scrollToTargetAdjusted(el, offset){
+
 		var element = document.getElementById(el);
 		if(!element) return
     var headerOffset = offset;
@@ -314,6 +324,15 @@ windows.on('scroll', function() {
 			$(`.service-details-section div:nth-child(${$($parent).index() + 1})`).addClass('visible')
 		}
 	})
+
+	// $('.left-menu2 li a').each(function(index){
+	// 	var $this = $(this);
+
+	// 	if($this.attr('href') === current.replace('%20', ' ')){
+	// 		const offset = 250 
+	// 		scrollToTargetAdjusted(current.replace('%20', " "), offset)
+	// 	}
+	// })
 
 	$(selector).on('click', function(){
 
@@ -446,4 +465,18 @@ function scrollToKnowMore(){
 
 function showSentinelCert(){
 	$('#exampleModal2').modal()
+}
+
+	
+function scrollToTargetAdjusted(el, offset){
+	var element = document.getElementById(el);
+	if(!element) return
+	var headerOffset = offset;
+	var elementPosition = element.getBoundingClientRect().top;
+	var offsetPosition = elementPosition - headerOffset;
+
+	window.scrollTo({
+		top: offsetPosition,
+		behavior: "smooth"
+	});
 }

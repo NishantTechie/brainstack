@@ -174,7 +174,7 @@
                                                 <!-- <li><a href="blog-details.html">Blog Details</a></li> -->
                                             <!-- </ul> -->
                                         </li>
-                                        <li><a class="pages" href="#">Careers/a>
+                                        <li><a class="pages" href="#">Careers</a>
                                             <ul class="sub-menu">
                                                 <li><a href="why-join-us.html">Why join us?</a></li>
                                                 <li><a href="current-openings.html">Current Openings</a></li>
@@ -1852,7 +1852,7 @@
                             </div>
                             <div class="col-md-7 col-sm-8 col-xs-12">
                                 <div class="row">
-                                    <form id="contactForm" method="POST" onsubmit="submitForm()" class="contact-form">
+                                    <form name="contact" id="contactForm" method="POST" onsubmit="submitForm()" class="contact-form" data-netlify="true">
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
                                             <div class="help-block with-errors"></div>
@@ -2198,6 +2198,7 @@ ideation to execution, thus enabling our global clients to outperform the compet
 		<!-- plugins js -->
 		<script src="js/plugins.js"></script>
 		<!-- main js -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="js/main.js"></script>
         <script>
             $(window).on('load',function(){
