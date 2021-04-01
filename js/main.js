@@ -298,22 +298,10 @@ windows.on('scroll', function() {
 	}
     
   /*----------------------------
-   Services Tab
+   New Changes 
 	------------------------------ */
-
-	// setTimeout(() => {
-	// 	$('#exampleModal').modal()
-	// }, 2000)
-
-
-		// document.querySelector("#contactForm").addEventListener("submit", handleSubmit);
-
-		// const handleSubmit = (e) => {
-		// 	e.preventDefault()
-			
-		// }
-
-
+	document.getElementById('copyrightYear').innerHTML = new Date().getFullYear()
+	
 	const selector = '.left-menu li';
 	const current = location.hash;
 	
@@ -505,4 +493,8 @@ function scrollToTargetAdjusted(el, offset){
 		top: offsetPosition,
 		behavior: "smooth"
 	});
+}
+
+function setCurrentYear(){
+	document.getElementById('copyrightYear').innerHTML = new Date().getFullYear()
 }
