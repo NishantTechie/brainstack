@@ -3607,13 +3607,15 @@ video {
 }
 
 .team-member-img {
-  /* background-image: url('img/team/chhavi.jpeg'); */
-
-  background-position: center;
-  height: 300px;
-  width: 300px;
+  /* background-position: center; */
+  height: 360px;
+  width: 360px;
   object-fit: cover;
   object-position: 50% 0%;
+}
+
+.naveen {
+  object-position: 50% 50%;
 }
 
 .review-vid {
