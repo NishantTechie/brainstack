@@ -3575,7 +3575,7 @@ video {
   .intro-area-2 {
     /* background-color: #00ACED; */
     padding-bottom: 20px;
-    background-image: url("img/background/hero-thumbnail.jpg");
+    background-image: url("img/background/hero-thumbnail.webp");
     object-fit: cover;
   }
   .intro-area-2 .slider-content,
